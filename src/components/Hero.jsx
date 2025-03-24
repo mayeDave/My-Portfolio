@@ -1,47 +1,71 @@
 import { motion } from "framer-motion";
-
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { FaGithub, FaTwitter, FaWhatsapp, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
+    <section className="w-full min-h-screen bg-[#0f0f1b] text-white flex flex-col lg:flex-row items-center justify-around gap-10 px-6 lg:px-20 py-28 md:py-16 relative overflow-hidden">
+      {/* Left Section */}
+      <div className="text-center lg:text-left z-10">
+        <motion.h1
+          className="text-[clamp(1.5rem,4vw,6rem)] font-bold leading-tight"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Hey There,<br />
+          I&apos;m <span className="text-blue-400">David!</span>
+        </motion.h1>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>David</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-          I’m a full-stack software developer specialized  <br className='sm:block hidden' />
-          in building dynamic web applications.
-          </p>
+        <motion.p
+          className="mt-4 text-lg md:text-3xl text-gray-300 max-w-lg"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          FullStack Developer
+          <br />
+          I craft beautiful and scalable full-stack applications.
+        </motion.p>
+
+        <div className="mt-4 flex gap-4 justify-center lg:justify-start">
+          {/* Social Icons */}
+          <a href="https://www.linkedin.com/in/david-olorunmaye-315137327" target="_blank" rel="noopener noreferrer" className="bg-blue-600 w-10 h-10 rounded-lg flex justify-center items-center">
+            <FaLinkedinIn size={24} />
+          </a>
+          <a href="https://www.github.com/mayeDave" target="_blank" rel="noopener noreferrer" className="bg-black-300 w-10 h-10 rounded-lg flex justify-center items-center">
+            <FaGithub size={24} />
+          </a>
+          <a href="https://wa.me/2349012411554" target="_blank" rel="noopener noreferrer" className="bg-green-600 w-10 h-10 rounded-lg flex justify-center items-center">
+            <FaWhatsapp size={24} />
+          </a>
+          <a href="mailto:olorunmayedavid1234@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-blue-600 w-10 h-10 rounded-lg flex justify-center items-center">
+            <FaEnvelope size={24} />
+          </a>
         </div>
       </div>
 
-      <ComputersCanvas className='sm:block hidden' />
+      {/* Right Section */}
+      <motion.div
+        className="relative flex items-center justify-center mt-10 lg:mt-0"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        {/* Blobby Background */}
+        <div className="absolute w-[280px] sm:w-[340px] h-[340px] bg-blue-200 rounded-full mix-blend-lighten blur-3xl z-0" />
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
-            />
-          </div>
+        {/* Profile Image */}
+        <img
+          src="dav-nobg.png"
+          alt="David"
+          className="relative z-10 w-[240px] sm:w-[320px] rounded-full shadow-sm object-fit"
+        />
+      </motion.div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <a href="#about" className="text-sm text-white bg-blue-400 px-4 py-2 rounded-full shadow-md">
+          Scroll Down ↓
         </a>
       </div>
     </section>

@@ -74,35 +74,7 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
-        <div className="flex flex-col gap-4">
-          <a
-            href="https://www.linkedin.com/in/david-olorunmaye-315137327"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline text-xl"
-          >
-            LinkedIn
-          </a>
-
-          <div className="flex items-center gap-4">
-            <p className="text-gray-700 text-lg">
-              <span className="font-bold">Phone:</span> +234 901 241 1554 | +234
-              905 952 2017
-            </p>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <p className="text-gray-700 text-lg">
-              <span className="font-bold">Email:</span>{" "}
-              <a
-                href="mailto:olorunmayedavid1234@gmail.com"
-                className="text-blue-500 hover:underline"
-              >
-                olorunmayedavid1234@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
+        <p>Have questions or want to collaborate? I would love to hear from you. Reach out and let''s make a difference together</p>
 
         <form
           ref={formRef}

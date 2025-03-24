@@ -3,18 +3,6 @@ import {
     backend,
     creator,
     web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    figma,
-    docker,
     meta,
     starbucks,
     tesla,
@@ -22,9 +10,9 @@ import {
     carrent,
     jobit,
     tripguide,
-    threejs,
     mayeAutos,
     techConnect,
+    movie,
   } from "../assets";
   
   export const navLinks = [
@@ -33,8 +21,8 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "works",
+      title: "Works",
     },
     {
       id: "contact",
@@ -64,57 +52,50 @@ import {
   const technologies = [
     {
       name: "HTML 5",
-      icon: html,
+      icon: "/tech/html.png",
     },
     {
       name: "CSS 3",
-      icon: css,
+      icon: "/tech/css.png",
     },
     {
       name: "JavaScript",
-      icon: javascript,
+      icon: "/tech/javascript.png",
     },
     {
       name: "TypeScript",
-      icon: typescript,
+      icon: "/tech/typescript.png",
     },
     {
       name: "React JS",
-      icon: reactjs,
+      icon: "/tech/reactjs.png",
     },
     {
       name: "Redux Toolkit",
-      icon: redux,
+      icon: "/tech/redux.png",
     },
     {
       name: "Tailwind CSS",
-      icon: tailwind,
+      icon: "/tech/tailwind.png",
     },
     {
       name: "Node JS",
-      icon: nodejs,
+      icon: "/tech/nodejs.png",
     },
     {
       name: "MongoDB",
-      icon: mongodb,
+      icon: "/tech/mongodb.png",
     },
     {
       name: "Three JS",
-      icon: threejs,
+      icon: "/tech/threejs.svg",
     },
     {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
+      name: "Git",
+      icon: "/tech/git.png",
     },
   ];
+  
   
   const experiences = [
     {
@@ -248,25 +229,26 @@ import {
       project_link: "https://techconnect-1fnb.onrender.com/",
     },
     {
-      name: "Trip Guide",
+      name: "Movie App",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "A fullstack movie application, where users can search for trending movies and get review of movies directly from a movie api (TMDB).",
       tags: [
         {
-          name: "nextjs",
+          name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "appwrite",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "tailwind",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: movie,
+      source_code_link: "https://github.com/mayeDave/movie-app.git",
+      project_link: "https://movie-app-h8bw.onrender.com/",
     },
   ];
   

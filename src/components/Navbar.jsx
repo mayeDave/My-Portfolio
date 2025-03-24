@@ -33,7 +33,7 @@ const Navbar = () => {
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className='w-full flex justify-around items-center max-w-7xl mx-auto'>
         <Link
           to='/'
           className='flex items-center gap-2'
@@ -42,10 +42,9 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo2} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[28px] font-bold cursor-pointer flex '>
-            mayeDave &nbsp;
-            <span className='sm:block hidden'>| Software Developer</span>
+          <p className='text-white text-[clamp(1.5rem,2vw,4rem)] font-bold cursor-pointer'>
+            {/* mayeDave &nbsp; */}
+            <span>Olorunmaye David</span>
           </p>
         </Link>
 
@@ -54,8 +53,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-white" : "text-blue-200"
+              } hover:text-white text-[clamp(1rem,1.5vw,2rem)] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -74,7 +73,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[100px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
